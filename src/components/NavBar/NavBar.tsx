@@ -1,35 +1,43 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
+import './NavBar.css';
 
 const NavBar:React.FC = () => {
   return (
-    <nav className="nav-bar">
+    <nav className="navbar">
       <div className="container-fluid">
-        <NavLink className="navbar-brand" to="/">
+        <NavLink to="/" className="navbar-brand">
           Static Pages
         </NavLink>
-        <div/>
 
+        <ul className="navList d-flex flex-row gap-3 flex-nowrap">
 
-        <ul className='navbar-list d-flex flex-row gap-3 flex-nowrap'>
           <li className="nav-item">
-            <NavLink className="nav-link" to="/">
+            <NavLink to="/" className="nav-link">
               Home
             </NavLink>
-
-            <NavLink className="nav-link" to="/about">
+          </li>
+          |
+          <li className="nav-item">
+            <NavLink to="/About" className="nav-link">
               About
             </NavLink>
-
-            <NavLink className="nav-link" to="/contacts">
+          </li>
+          |
+          <li className="nav-item">
+            <NavLink to="/Contacts" className="nav-link">
               Contacts
             </NavLink>
-
-            <NavLink className="nav-link" to="/divisions">
+          </li>
+          |
+          <li className="nav-item">
+            <NavLink to="/Divisions" className="nav-link">
               Divisions
             </NavLink>
-
-            <NavLink className="nav-link" to="/admin">
+          </li>
+|
+          <li className="nav-item">
+            <NavLink to="/admin" className="nav-link">
               Admin
             </NavLink>
           </li>
