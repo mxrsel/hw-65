@@ -1,10 +1,21 @@
 import React from 'react';
+import {PAGES} from '../../constants';
 
 const Admin: React.FC= () => {
   return (
     <div className="adminPage">
       <h1>Edit pages</h1>
-      <select></select>
+      <form>
+      <select
+        name="page"
+        id="page"
+        required
+        className="select-page">
+        <option value="">Select Page</option>
+        {PAGES.map((page) => (
+          <option key={page.id} value={page.id}></option>
+        ))}
+      </select>
       <label>
         Title
       <input
@@ -18,6 +29,7 @@ const Admin: React.FC= () => {
 
         </textarea>
       </label>
+      </form>
     </div>
   );
 };
